@@ -1,0 +1,16 @@
+{
+  "name": "MyGarage — Vehicle Management System",
+  "short_name": "MyGarage",
+  "description": "Manage vehicles, document locker, service history, expenses, and expiry reminders.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0D4450",
+  "theme_color": "#0D4450",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}
