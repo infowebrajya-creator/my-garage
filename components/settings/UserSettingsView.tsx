@@ -15,11 +15,17 @@ import {
   Save,
   RotateCcw,
   ShieldCheck,
-  CheckCircle2
+  CheckCircle2,
+  Download,
+  Smartphone,
+  Wifi,
+  Sparkles
 } from 'lucide-react';
+import { usePWA } from '@/context/PWAContext';
 
 export function UserSettingsView() {
   const { settings, updateSettings, resetAllData } = useGarage();
+  const { openInstallModal, isStandalone, isInstalled, isIOS, installApp } = usePWA();
 
   const [name, setName] = useState(settings.name);
   const [email, setEmail] = useState(settings.email);
@@ -355,6 +361,85 @@ export function UserSettingsView() {
           </button>
         </div>
       </form>
+
+      {/* Progressive Web App (PWA) Card */}
+      <div className="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-xs space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-4">
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-700 shrink-0">
+              <Smartphone className="w-6 h-6" />
+            </div>
+            <div>
+              <div className="flex items-center gap-2">
+                <h3 className="font-bold text-slate-900 text-sm">
+                  App Installation & Progressive Web App (PWA)
+                </h3>
+                {isStandalone ? (
+                  <span className="px-2 py-0.5 rounded text-[10px] font-extrabold uppercase bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1">
+                    <CheckCircle2 className="w-3 h-3 text-emerald-600" /> Standalone App
+                  </span>
+                ) : (
+                  <span className="px-2 py-0.5 rounded text-[10px] font-extrabold uppercase bg-amber-50 text-amber-700 border border-amber-200">
+                    Browser Mode
+                  </span>
+                )}
+              </div>
+              <p className="text-xs text-slate-500 mt-0.5">
+                Install Nandan Travels directly onto your Android, iPhone, or Desktop as a fast native-like app
+              </p>
+            </div>
+          </div>
+
+          <button
+            onClick={openInstallModal}
+            className="px-4 py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold text-xs rounded-xl shadow-sm transition-all flex items-center gap-2 shrink-0 cursor-pointer self-start sm:self-auto"
+          >
+            <Download className="w-4 h-4" />
+            <span>{isStandalone ? 'View App Details' : 'Install App on Device'}</span>
+          </button>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1 text-xs">
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
+            <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
+              Offline Storage
+            </span>
+            <div className="flex items-center gap-1.5 mt-1 text-emerald-700 font-bold">
+              <Wifi className="w-3.5 h-3.5" />
+              <span>Service Worker Active</span>
+            </div>
+            <p className="text-[11px] text-slate-400 mt-0.5">
+              Cached vehicles, documents, and service logs available offline
+            </p>
+          </div>
+
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
+            <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
+              Home Screen Launch
+            </span>
+            <div className="flex items-center gap-1.5 mt-1 text-slate-900 font-bold">
+              <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+              <span>Dedicated Icon</span>
+            </div>
+            <p className="text-[11px] text-slate-400 mt-0.5">
+              Launches in fullscreen without browser tabs or address bar
+            </p>
+          </div>
+
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
+            <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
+              Device Compatibility
+            </span>
+            <div className="flex items-center gap-1.5 mt-1 text-blue-700 font-bold">
+              <ShieldCheck className="w-3.5 h-3.5" />
+              <span>Chrome, Safari, Edge</span>
+            </div>
+            <p className="text-[11px] text-slate-400 mt-0.5">
+              Full cross-platform PWA manifest & icon suite installed
+            </p>
+          </div>
+        </div>
+      </div>
 
       {/* Security Section (UI Only) */}
       <form onSubmit={handlePasswordSubmit} className="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-xs space-y-4">

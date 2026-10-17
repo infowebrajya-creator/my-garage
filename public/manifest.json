@@ -1,16 +1,71 @@
 {
-  "name": "MyGarage — Vehicle Management System",
-  "short_name": "MyGarage",
-  "description": "Manage vehicles, document locker, service history, expenses, and expiry reminders.",
+  "id": "/?source=pwa",
+  "name": "Nandan Travels — Fleet & Vehicle Management System",
+  "short_name": "Nandan Fleet",
+  "description": "Commercial fleet tracking, duty rosters, trip sheets, document locker, service logs, and expense management.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#0D4450",
-  "theme_color": "#0D4450",
+  "display_override": ["standalone", "window-controls-overlay", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#0F172A",
+  "theme_color": "#0F172A",
+  "categories": ["business", "productivity", "utilities", "travel"],
   "icons": [
     {
-      "src": "/favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
-  ]
+  ],
+  "shortcuts": [
+    {
+      "name": "Fleet Dashboard",
+      "short_name": "Dashboard",
+      "description": "Open Commercial Fleet Dashboard",
+      "url": "/dashboard",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Live GPS Telematics",
+      "short_name": "GPS Tracking",
+      "description": "View live vehicle telemetry and route map",
+      "url": "/tracking",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Document Locker",
+      "short_name": "Documents",
+      "description": "Access RTO permits, insurance and fitness certificates",
+      "url": "/documents",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Service History",
+      "short_name": "Maintenance",
+      "description": "Check fleet maintenance and service ledger",
+      "url": "/services",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "prefer_related_applications": false
 }

@@ -22,10 +22,14 @@ import {
   LogOut,
   X,
   Plus,
-  Truck
+  Truck,
+  Download,
+  Smartphone,
+  CheckCircle2
 } from 'lucide-react';
 import { useGarage } from '@/context/GarageContext';
 import { useToast } from '@/context/ToastContext';
+import { usePWA } from '@/context/PWAContext';
 
 interface SidebarProps {
   onCloseMobile?: () => void;
@@ -36,6 +40,7 @@ export function Sidebar({ onCloseMobile }: SidebarProps) {
   const router = useRouter();
   const { openModal, settings } = useGarage();
   const { showToast } = useToast();
+  const { openInstallModal, isStandalone } = usePWA();
 
   const navSections = [
     {
@@ -148,6 +153,25 @@ export function Sidebar({ onCloseMobile }: SidebarProps) {
           </div>
         ))}
       </nav>
+
+      {/* PWA Install Entry */}
+      <div className="px-4 py-2.5 border-t border-slate-200/80 bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-transparent">
+        <button
+          onClick={() => {
+            if (onCloseMobile) onCloseMobile();
+            openInstallModal();
+          }}
+          className="w-full flex items-center justify-between px-3 py-2 rounded-xl bg-white hover:bg-amber-50 border border-amber-300/80 text-amber-950 font-bold text-xs transition-all shadow-2xs hover:shadow-xs cursor-pointer group active:scale-[0.98]"
+        >
+          <div className="flex items-center gap-2">
+            <Download className="w-3.5 h-3.5 text-amber-600 group-hover:scale-110 transition-transform" />
+            <span>{isStandalone ? 'App Mode Active' : 'Install App'}</span>
+          </div>
+          <span className="text-[10px] uppercase font-extrabold px-1.5 py-0.5 bg-amber-500 text-slate-950 rounded shadow-2xs">
+            PWA
+          </span>
+        </button>
+      </div>
 
       {/* Bottom User Card & Logout */}
       <div className="p-4 border-t border-slate-200/80 bg-white">

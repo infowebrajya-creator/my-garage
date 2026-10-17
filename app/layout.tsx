@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { ToastProvider } from '@/context/ToastContext';
 import { GarageProvider } from '@/context/GarageContext';
+import { PWAProvider } from '@/context/PWAContext';
+import { InstallAppBanner } from '@/components/common/InstallAppBanner';
+import { InstallAppModal } from '@/components/modals/InstallAppModal';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -28,6 +31,15 @@ export const metadata: Metadata = {
     'Service History Tracker',
   ],
   manifest: '/manifest.json',
+  icons: {
+    icon: [
+      { url: '/favicon.png', sizes: '64x64', type: 'image/png' },
+      { url: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/icons/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
@@ -40,6 +52,7 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
+  themeColor: '#0F172A',
 };
 
 export default function RootLayout({
@@ -54,9 +67,16 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-slate-50 text-slate-900 font-sans antialiased">
         <ToastProvider>
-          <GarageProvider>{children}</GarageProvider>
+          <PWAProvider>
+            <GarageProvider>
+              {children}
+              <InstallAppBanner />
+              <InstallAppModal />
+            </GarageProvider>
+          </PWAProvider>
         </ToastProvider>
       </body>
     </html>
   );
 }
+

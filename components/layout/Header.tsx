@@ -13,9 +13,12 @@ import {
   AlertTriangle,
   ChevronRight,
   CheckCircle2,
-  X
+  X,
+  Download,
+  Smartphone
 } from 'lucide-react';
 import { useGarage } from '@/context/GarageContext';
+import { usePWA } from '@/context/PWAContext';
 import { getDaysRemaining } from '@/lib/utils';
 
 interface HeaderProps {
@@ -25,6 +28,7 @@ interface HeaderProps {
 export function Header({ onOpenMobileSidebar }: HeaderProps) {
   const pathname = usePathname();
   const { searchQuery, setSearchQuery, documents, reminders, settings, vehicles } = useGarage();
+  const { openInstallModal, isStandalone, isInstalled } = usePWA();
   const [showNotifications, setShowNotifications] = useState(false);
   const [showProfileMenu, setShowProfileMenu] = useState(false);
 
@@ -126,8 +130,25 @@ export function Header({ onOpenMobileSidebar }: HeaderProps) {
         </div>
       </div>
 
-      {/* Right Actions: Notifications & Profile Dropdown */}
+      {/* Right Actions: Install App, Notifications & Profile Dropdown */}
       <div className="flex items-center gap-2 sm:gap-3">
+        {/* PWA Install Button */}
+        {isStandalone ? (
+          <span className="hidden sm:flex items-center gap-1.5 px-2.5 py-1.5 bg-emerald-50 text-emerald-800 border border-emerald-200/80 rounded-xl text-[11px] font-bold shadow-2xs">
+            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+            <span>App Mode</span>
+          </span>
+        ) : (
+          <button
+            onClick={openInstallModal}
+            className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 sm:py-2 bg-amber-500/10 hover:bg-amber-500/20 text-amber-900 border border-amber-300/80 rounded-xl text-xs font-bold transition-all shadow-2xs hover:shadow-xs active:scale-95 cursor-pointer"
+            title="Install Nandan Travels as standalone mobile/desktop app"
+          >
+            <Download className="w-3.5 h-3.5 text-amber-600" />
+            <span className="hidden sm:inline">Install App</span>
+          </button>
+        )}
+
         {/* Notification Bell */}
         <div className="relative">
           <button
@@ -288,6 +309,17 @@ export function Header({ onOpenMobileSidebar }: HeaderProps) {
                 <CreditCard className="w-4 h-4 text-slate-500" />
                 <span>Billing & Subscription</span>
               </Link>
+
+              <button
+                onClick={() => {
+                  setShowProfileMenu(false);
+                  openInstallModal();
+                }}
+                className="w-full flex items-center gap-2.5 px-3 py-2.5 text-xs text-amber-700 hover:bg-amber-50 rounded-xl transition-colors font-bold cursor-pointer text-left"
+              >
+                <Download className="w-4 h-4 text-amber-600" />
+                <span>{isStandalone ? 'App Mode Details' : 'Install App (PWA)'}</span>
+              </button>
 
               <div className="border-t border-slate-100 my-1 pt-1">
                 <Link
