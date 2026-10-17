@@ -95,8 +95,8 @@ export function Header({ onOpenMobileSidebar }: HeaderProps) {
 
         <img
           src="/images/webrajya_logo_badge.png"
-          alt="WebRajya Logo"
-          className="md:hidden w-8 h-8 object-contain"
+          alt="WebRajya My Garage Logo"
+          className="w-9 h-9 sm:w-10 sm:h-10 object-contain shrink-0"
         />
 
         <div>

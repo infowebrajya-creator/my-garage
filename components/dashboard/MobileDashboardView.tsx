@@ -55,13 +55,20 @@ export function MobileDashboardView() {
         <div className="absolute top-0 right-0 w-48 h-48 bg-blue-500/10 rounded-full blur-2xl pointer-events-none" />
 
         <div className="flex items-center justify-between relative z-10">
-          <div>
-            <span className="text-[10px] font-extrabold uppercase tracking-widest text-blue-400">
-              MyGarage Dashboard
-            </span>
-            <h2 className="text-lg font-black text-white tracking-tight mt-0.5">
-              Welcome back, {settings.name} 👋
-            </h2>
+          <div className="flex items-center gap-3">
+            <img
+              src="/images/webrajya_logo_badge.png"
+              alt="WebRajya My Garage Logo"
+              className="w-12 h-12 object-contain shrink-0 drop-shadow-md"
+            />
+            <div>
+              <span className="text-[10px] font-extrabold uppercase tracking-widest text-blue-400">
+                WebRajya My Garage
+              </span>
+              <h2 className="text-base font-black text-white tracking-tight mt-0.5">
+                Welcome back, {settings.name} 👋
+              </h2>
+            </div>
           </div>
 
           <button

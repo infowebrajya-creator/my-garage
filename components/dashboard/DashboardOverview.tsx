@@ -69,11 +69,18 @@ export function DashboardOverview() {
       <div className="hidden md:block space-y-6">
         {/* Top Banner Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white p-6 rounded-3xl border border-slate-200/60 shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
-          <div>
-            <h2 className="text-2xl font-extrabold text-slate-900 tracking-tight">Dashboard Overview</h2>
-            <p className="text-xs text-slate-500 mt-1">
-              Welcome back, <strong className="text-slate-800">{settings.name}</strong>! Operational metrics for your fleet today.
-            </p>
+          <div className="flex items-center gap-4">
+            <img
+              src="/images/webrajya_logo_badge.png"
+              alt="WebRajya My Garage Logo"
+              className="w-14 h-14 object-contain shrink-0"
+            />
+            <div>
+              <h2 className="text-2xl font-extrabold text-slate-900 tracking-tight">Dashboard Overview</h2>
+              <p className="text-xs text-slate-500 mt-1">
+                Welcome back, <strong className="text-slate-800">{settings.name}</strong>! WebRajya My Garage operational metrics.
+              </p>
+            </div>
           </div>
 
           <div className="flex items-center gap-3">
