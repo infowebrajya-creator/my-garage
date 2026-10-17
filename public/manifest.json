@@ -1,15 +1,15 @@
 {
   "id": "/?source=pwa",
-  "name": "Nandan Travels — Fleet & Vehicle Management System",
-  "short_name": "Nandan Fleet",
-  "description": "Commercial fleet tracking, duty rosters, trip sheets, document locker, service logs, and expense management.",
+  "name": "WebRajya My Garage — Vehicle Management System",
+  "short_name": "My Garage",
+  "description": "Manage vehicles, document locker, service history, expenses, challans, insurance, and expiry reminders.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "display_override": ["standalone", "window-controls-overlay", "minimal-ui"],
   "orientation": "any",
-  "background_color": "#0F172A",
-  "theme_color": "#0F172A",
+  "background_color": "#08192E",
+  "theme_color": "#08192E",
   "categories": ["business", "productivity", "utilities", "travel"],
   "icons": [
     {
@@ -39,30 +39,30 @@
   ],
   "shortcuts": [
     {
-      "name": "Fleet Dashboard",
+      "name": "Garage Dashboard",
       "short_name": "Dashboard",
-      "description": "Open Commercial Fleet Dashboard",
+      "description": "Open Garage Dashboard",
       "url": "/dashboard",
       "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
     },
     {
-      "name": "Live GPS Telematics",
-      "short_name": "GPS Tracking",
-      "description": "View live vehicle telemetry and route map",
-      "url": "/tracking",
+      "name": "My Vehicles",
+      "short_name": "Vehicles",
+      "description": "View all garage vehicles and details",
+      "url": "/vehicles",
       "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
     },
     {
       "name": "Document Locker",
       "short_name": "Documents",
-      "description": "Access RTO permits, insurance and fitness certificates",
+      "description": "Access RC, insurance and fitness certificates",
       "url": "/documents",
       "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
     },
     {
       "name": "Service History",
       "short_name": "Maintenance",
-      "description": "Check fleet maintenance and service ledger",
+      "description": "Check vehicle maintenance and service ledger",
       "url": "/services",
       "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
     }

@@ -34,18 +34,20 @@ export function LoginView() {
       <div className="hidden lg:flex lg:w-1/2 bg-slate-900 text-white flex-col justify-between p-12 relative overflow-hidden">
         {/* Top Header Logo */}
         <div className="relative z-10 flex items-center gap-3.5">
-          <div className="w-12 h-12 rounded-2xl bg-blue-600 flex items-center justify-center text-white shadow-xl shadow-blue-500/30">
-            <Truck className="w-7 h-7" />
-          </div>
+          <img
+            src="/images/webrajya_logo_badge.png"
+            alt="WebRajya My Garage Logo"
+            className="w-14 h-14 object-contain drop-shadow-lg shrink-0"
+          />
           <div>
             <h1 className="font-extrabold text-2xl tracking-tight text-white flex items-center gap-2">
-              MyGarage
+              WebRajya
               <span className="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-400 text-[10px] uppercase font-bold border border-blue-400/30">
-                Enterprise
+                My Garage
               </span>
             </h1>
             <p className="text-xs text-slate-400 font-medium tracking-wide">
-              Complete Vehicle & Fleet Management For Your Business
+              Vehicle &bull; Documents &bull; Reminders &bull; Fleet Management
             </p>
           </div>
         </div>
@@ -127,13 +129,15 @@ export function LoginView() {
       {/* Right Panel - Sign In Form matching Design Spec */}
       <div className="flex-1 flex flex-col justify-between p-6 sm:p-12 lg:p-16 bg-white text-slate-900">
         <div className="lg:hidden flex items-center gap-3 mb-6">
-          <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white">
-            <Truck className="w-6 h-6" />
-          </div>
+          <img
+            src="/images/webrajya_logo_badge.png"
+            alt="WebRajya My Garage Logo"
+            className="w-12 h-12 object-contain shrink-0"
+          />
           <div>
-            <h1 className="font-extrabold text-xl text-slate-900 tracking-tight">MyGarage</h1>
-            <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">
-              Fleet Management System
+            <h1 className="font-extrabold text-xl text-slate-900 tracking-tight">WebRajya My Garage</h1>
+            <p className="text-[10px] text-blue-600 font-bold uppercase tracking-wider">
+              Vehicle &bull; Documents &bull; Reminders
             </p>
           </div>
         </div>

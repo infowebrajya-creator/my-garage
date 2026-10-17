@@ -39,7 +39,7 @@ export function InstallAppModal() {
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header Banner */}
-        <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-amber-950 p-6 text-white relative">
+        <div className="bg-gradient-to-br from-slate-950 via-[#08192E] to-blue-950 p-6 text-white relative">
           <button
             onClick={closeInstallModal}
             className="absolute top-4 right-4 p-2 text-slate-400 hover:text-white rounded-full hover:bg-white/10 transition-colors"
@@ -50,13 +50,13 @@ export function InstallAppModal() {
 
           <div className="flex items-center gap-4">
             <img
-              src="/icons/icon-192.png"
-              alt="Nandan Travels Icon"
-              className="w-16 h-16 rounded-2xl shadow-xl border-2 border-amber-500/50 object-cover bg-slate-900"
+              src="/images/webrajya_logo_badge.png"
+              alt="WebRajya My Garage Icon"
+              className="w-16 h-16 rounded-2xl shadow-xl border-2 border-blue-500/40 object-contain bg-[#08192E]"
             />
             <div>
               <div className="flex items-center gap-2">
-                <span className="px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/30 rounded-md">
+                <span className="px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-wider bg-blue-500/20 text-blue-300 border border-blue-500/30 rounded-md">
                   PWA Ready
                 </span>
                 {isStandalone && (
@@ -66,10 +66,10 @@ export function InstallAppModal() {
                 )}
               </div>
               <h2 className="text-lg font-extrabold text-white mt-1 leading-snug">
-                Nandan Travels
+                WebRajya My Garage
               </h2>
-              <p className="text-xs text-amber-200/90 font-medium">
-                Fleet & Vehicle Management
+              <p className="text-xs text-blue-200/90 font-medium">
+                Vehicle &bull; Documents &bull; Reminders
               </p>
             </div>
           </div>
@@ -86,14 +86,14 @@ export function InstallAppModal() {
                 Application is Installed!
               </h3>
               <p className="text-xs text-emerald-800">
-                Nandan Travels is running in standalone mode on your device. You can launch it directly from your Home Screen or App Drawer anytime.
+                WebRajya My Garage is running in standalone mode on your device. You can launch it directly from your Home Screen or App Drawer anytime.
               </p>
             </div>
           ) : isIOS ? (
             /* iOS Safari Instructions */
             <div className="space-y-4">
-              <div className="p-3.5 rounded-2xl bg-amber-50/80 border border-amber-200 text-xs text-amber-950 flex items-start gap-3">
-                <Smartphone className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+              <div className="p-3.5 rounded-2xl bg-blue-50/80 border border-blue-200 text-xs text-blue-950 flex items-start gap-3">
+                <Smartphone className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
                 <div>
                   <span className="font-bold block">Install on iOS (iPhone / iPad)</span>
                   Apple Safari requires manual 2-tap install from the browser menu:
@@ -133,15 +133,15 @@ export function InstallAppModal() {
             /* Android / Chrome / Edge / Desktop */
             <div className="space-y-4">
               <p className="text-xs text-slate-600">
-                Install Nandan Travels as a standalone application on your mobile device or computer for instant access, offline document checking, and fullscreen experience.
+                Install WebRajya My Garage as a standalone application on your mobile device or computer for instant access, offline document checking, and fullscreen experience.
               </p>
 
               <button
                 onClick={handleInstallClick}
-                className="w-full py-3.5 px-4 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-extrabold text-sm rounded-2xl shadow-lg shadow-amber-500/25 flex items-center justify-center gap-2.5 transition-all transform active:scale-[0.98] cursor-pointer"
+                className="w-full py-3.5 px-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-extrabold text-sm rounded-2xl shadow-lg shadow-blue-500/25 flex items-center justify-center gap-2.5 transition-all transform active:scale-[0.98] cursor-pointer"
               >
-                <Download className="w-5 h-5 text-slate-950" />
-                <span>Install Nandan Travels App</span>
+                <Download className="w-5 h-5 text-white" />
+                <span>Install WebRajya My Garage App</span>
               </button>
             </div>
           )}

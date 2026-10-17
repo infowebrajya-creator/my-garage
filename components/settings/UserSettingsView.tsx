@@ -366,8 +366,12 @@ export function UserSettingsView() {
       <div className="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-xs space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-4">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-700 shrink-0">
-              <Smartphone className="w-6 h-6" />
+            <div className="w-12 h-12 rounded-xl bg-[#08192E] border border-blue-500/30 flex items-center justify-center p-1.5 shrink-0 shadow-xs">
+              <img
+                src="/images/webrajya_logo_badge.png"
+                alt="WebRajya Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
               <div className="flex items-center gap-2">
@@ -379,20 +383,20 @@ export function UserSettingsView() {
                     <CheckCircle2 className="w-3 h-3 text-emerald-600" /> Standalone App
                   </span>
                 ) : (
-                  <span className="px-2 py-0.5 rounded text-[10px] font-extrabold uppercase bg-amber-50 text-amber-700 border border-amber-200">
+                  <span className="px-2 py-0.5 rounded text-[10px] font-extrabold uppercase bg-blue-50 text-blue-700 border border-blue-200">
                     Browser Mode
                   </span>
                 )}
               </div>
               <p className="text-xs text-slate-500 mt-0.5">
-                Install Nandan Travels directly onto your Android, iPhone, or Desktop as a fast native-like app
+                Install WebRajya My Garage directly onto your Android, iPhone, or Desktop as a fast native app
               </p>
             </div>
           </div>
 
           <button
             onClick={openInstallModal}
-            className="px-4 py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold text-xs rounded-xl shadow-sm transition-all flex items-center gap-2 shrink-0 cursor-pointer self-start sm:self-auto"
+            className="px-4 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold text-xs rounded-xl shadow-sm transition-all flex items-center gap-2 shrink-0 cursor-pointer self-start sm:self-auto"
           >
             <Download className="w-4 h-4" />
             <span>{isStandalone ? 'View App Details' : 'Install App on Device'}</span>

@@ -79,16 +79,20 @@ export function Sidebar({ onCloseMobile }: SidebarProps) {
     <aside className="w-64 bg-[#FAF8F5] text-slate-800 flex flex-col h-full shrink-0 select-none border-r border-slate-200/90 relative overflow-hidden shadow-2xs">
       {/* Brand Header */}
       <div className="h-20 px-6 flex items-center justify-between border-b border-slate-200/80">
-        <Link href="/dashboard" className="flex items-center gap-3.5 group">
-          <div className="w-10 h-10 rounded-xl bg-amber-500 flex items-center justify-center text-slate-950 shadow-xs group-hover:bg-amber-400 transition-colors font-black">
-            <Truck className="w-5.5 h-5.5 text-slate-950" />
-          </div>
+        <Link href="/dashboard" className="flex items-center gap-2.5 group">
+          <img
+            src="/images/webrajya_logo_badge.png"
+            alt="WebRajya My Garage Logo"
+            className="w-11 h-11 object-contain drop-shadow-sm group-hover:scale-105 transition-transform shrink-0"
+          />
           <div>
             <div className="flex items-center gap-1.5">
-              <span className="font-extrabold text-slate-900 tracking-tight text-base">NANDAN TRAVELS</span>
+              <span className="font-black text-slate-900 tracking-tight text-sm leading-none">
+                WEBRAJYA
+              </span>
             </div>
-            <p className="text-[10px] text-amber-700 font-extrabold tracking-wider uppercase mt-0.5">
-              EXPRESS FLEET &bull; MP-22
+            <p className="text-[10px] text-blue-600 font-extrabold tracking-widest uppercase mt-0.5">
+              MY GARAGE
             </p>
           </div>
         </Link>

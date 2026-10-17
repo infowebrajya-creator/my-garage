@@ -93,11 +93,17 @@ export function Header({ onOpenMobileSidebar }: HeaderProps) {
           <Menu className="w-5.5 h-5.5" />
         </button>
 
+        <img
+          src="/images/webrajya_logo_badge.png"
+          alt="WebRajya Logo"
+          className="md:hidden w-8 h-8 object-contain"
+        />
+
         <div>
           <div className="hidden sm:flex items-center gap-1.5 text-xs text-slate-400 font-semibold tracking-wide uppercase">
-            <span>Nandan Travels</span>
+            <span>WebRajya My Garage</span>
             <ChevronRight className="w-3 h-3 text-slate-400" />
-            <span className="text-amber-600 font-extrabold">{category}</span>
+            <span className="text-blue-600 font-extrabold">{category}</span>
           </div>
           <h1 className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight leading-tight">{title}</h1>
         </div>

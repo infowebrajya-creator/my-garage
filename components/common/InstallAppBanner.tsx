@@ -40,21 +40,21 @@ export function InstallAppBanner() {
         {/* Icon & Title */}
         <div className="flex items-center gap-3 min-w-0">
           <img
-            src="/icons/icon-192.png"
-            alt="Nandan Travels"
-            className="w-11 h-11 rounded-xl shadow-md border border-amber-500/40 shrink-0 bg-slate-950 object-cover"
+            src="/images/webrajya_logo_badge.png"
+            alt="WebRajya My Garage"
+            className="w-11 h-11 rounded-xl shadow-md border border-blue-500/40 shrink-0 bg-[#08192E] object-contain"
           />
           <div className="min-w-0">
             <div className="flex items-center gap-1.5">
               <h4 className="text-xs sm:text-sm font-extrabold text-white truncate">
-                Install Nandan Travels
+                Install My Garage
               </h4>
-              <span className="px-1.5 py-0.2 bg-amber-500/20 text-amber-300 border border-amber-500/30 rounded text-[9px] font-bold shrink-0">
+              <span className="px-1.5 py-0.2 bg-blue-500/20 text-blue-300 border border-blue-500/30 rounded text-[9px] font-bold shrink-0">
                 APP
               </span>
             </div>
             <p className="text-[11px] text-slate-300 truncate">
-              Add to Home Screen for fast offline fleet access
+              Add to Home Screen for fast offline vehicle & doc access
             </p>
           </div>
         </div>
@@ -63,9 +63,9 @@ export function InstallAppBanner() {
         <div className="flex items-center gap-2 shrink-0">
           <button
             onClick={handleAction}
-            className="px-3.5 py-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-extrabold text-xs rounded-xl shadow-md transition-all flex items-center gap-1.5 cursor-pointer whitespace-nowrap active:scale-95"
+            className="px-3.5 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-extrabold text-xs rounded-xl shadow-md transition-all flex items-center gap-1.5 cursor-pointer whitespace-nowrap active:scale-95"
           >
-            <Download className="w-3.5 h-3.5 text-slate-950" />
+            <Download className="w-3.5 h-3.5 text-white" />
             <span>Install</span>
           </button>
 

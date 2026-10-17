@@ -50,10 +50,10 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
         <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 space-y-6 pb-20 md:pb-8">
           {children}
 
-          {/* WebRajya Commercial Fleet Footer */}
+          {/* WebRajya My Garage Footer */}
           <footer className="pt-8 pb-4 text-center border-t border-slate-200/60 mt-12 text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-3">
             <div>
-              <span className="font-bold text-slate-800">Nandan Travels</span> &copy; {new Date().getFullYear()} Express Fleet Operations Management System (MP-22 Seoni).
+              <span className="font-bold text-slate-800">WebRajya My Garage</span> &copy; {new Date().getFullYear()} Vehicle, Document & Reminders Management System.
             </div>
             <div className="flex flex-wrap items-center justify-center gap-3 text-slate-500 font-medium text-[11px]">
               <span className="hover:text-slate-800 cursor-pointer">RTO Compliance</span>

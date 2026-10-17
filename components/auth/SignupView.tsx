@@ -36,18 +36,20 @@ export function SignupView() {
 
         <div className="relative z-10 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center text-white shadow-xl shadow-blue-500/30 border border-white/20">
-              <Truck className="w-6 h-6" />
-            </div>
+            <img
+              src="/images/webrajya_logo_badge.png"
+              alt="WebRajya My Garage Logo"
+              className="w-13 h-13 object-contain drop-shadow-lg shrink-0"
+            />
             <div>
               <h1 className="font-black text-2xl text-white tracking-tight flex items-center gap-2">
-                MyGarage
+                WebRajya
                 <span className="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 text-[10px] uppercase font-bold border border-blue-400/30">
-                  Fleet OS
+                  My Garage
                 </span>
               </h1>
               <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
-                By WebRajya Technologies
+                Vehicle &bull; Documents &bull; Reminders
               </p>
             </div>
           </div>
@@ -90,13 +92,15 @@ export function SignupView() {
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
             <div className="absolute bottom-4 left-4 right-4">
               <div className="flex items-center gap-2 mb-1">
-                <div className="w-7 h-7 rounded-lg bg-blue-600 flex items-center justify-center text-white">
-                  <Truck className="w-4 h-4" />
-                </div>
-                <span className="font-black text-white text-lg tracking-tight">MyGarage</span>
+                <img
+                  src="/images/webrajya_logo_badge.png"
+                  alt="WebRajya My Garage Logo"
+                  className="w-8 h-8 object-contain shrink-0"
+                />
+                <span className="font-black text-white text-lg tracking-tight">WebRajya My Garage</span>
               </div>
               <p className="text-xs text-slate-300 font-medium">
-                Truck, Bus, Car & Motorcycle Management Platform
+                Vehicle &bull; Documents &bull; Reminders
               </p>
             </div>
           </div>

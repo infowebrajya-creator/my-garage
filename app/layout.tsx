@@ -18,17 +18,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Nandan Travels — Express Fleet & Vehicle Management System',
+  title: 'WebRajya My Garage — Vehicle Management System',
   description:
-    'Nandan Travels commercial fleet management system for tracking vehicles, trip sheets, driver duty rosters, document locker, service logs, and e-challans.',
+    'WebRajya My Garage vehicle management system for tracking vehicles, document locker, service logs, insurance, challans, and expiry reminders.',
   keywords: [
-    'Nandan Travels',
-    'MP22 Fleet Management',
+    'WebRajya',
+    'My Garage',
     'Vehicle Management System',
-    'Commercial Fleet',
-    'Trip Duty Logger',
     'Document Locker',
     'Service History Tracker',
+    'Insurance & Reminders',
+    'Challans',
   ],
   manifest: '/manifest.json',
   icons: {
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
-    title: 'Nandan Travels',
+    title: 'My Garage',
   },
 };
 
@@ -52,7 +52,7 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
-  themeColor: '#0F172A',
+  themeColor: '#08192E',
 };
 
 export default function RootLayout({

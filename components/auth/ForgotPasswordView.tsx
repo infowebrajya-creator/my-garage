@@ -26,11 +26,18 @@ export function ForgotPasswordView() {
           <ArrowLeft className="w-4 h-4" /> Back to Sign In
         </Link>
 
-        <div>
-          <h2 className="text-2xl font-extrabold text-slate-900 tracking-tight">Reset Password</h2>
-          <p className="text-xs text-slate-500 mt-1">
-            Enter your account email to receive reset instructions
-          </p>
+        <div className="flex items-center gap-3 pt-1">
+          <img
+            src="/images/webrajya_logo_badge.png"
+            alt="WebRajya My Garage Logo"
+            className="w-12 h-12 object-contain shrink-0"
+          />
+          <div>
+            <h2 className="text-xl font-extrabold text-slate-900 tracking-tight">Reset Password</h2>
+            <p className="text-xs text-slate-500">
+              WebRajya My Garage Account Recovery
+            </p>
+          </div>
         </div>
 
         {submitted ? (
